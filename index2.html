@@ -9,12 +9,16 @@
         header{
             position: relative;
             /*x patta / y patta / blue size / kochchra pathirnwda kiyala / colr*/
-            box-shadow: 2px 6px 9px 2px darkgray;
+            box-shadow: -2px 6px 9px -4px #917a7a;
+            height: 80px;
+        }
+        body>main{
+            position: relative;
         }
 
         header>img{
             width: 150px;
-            margin: 5px;
+            margin: 10px;
         }
 
         header>ul{
@@ -38,6 +42,79 @@
             cursor: pointer;
             color: red;
         }
+
+        body>main>nav{
+            position: absolute;
+            width: 200px;
+            background: rebeccapurple;
+            top: 0;
+            bottom: 0;
+        }
+
+        body>main>nav>ul>li{
+            position: relative;
+            font-size: 20px;
+            list-style: none;
+            padding: 10px;
+            top: 20px;
+            left: 0;
+            color: white;
+            font-family: "Berlin Sans FB Demi" , cursive;
+        }
+
+        body>main>nav>ul>li:hover{
+            cursor: pointer;
+            color: red;
+            display: inline-block;
+        }
+
+        body>main>section>section{
+            height: 255px;
+            left: 0;
+            position: relative;
+        }
+
+        body>main>section>section>div:nth-child(1){
+            border: 2px solid black;
+            height: 250px;
+            width: 435px;
+            left: 205px;
+            position: absolute;
+        }
+
+        body>main>section>section>div:nth-child(2){
+            border: 2px solid black;
+            height: 250px;
+            width: 435px;
+            left: 642px;
+            position: absolute;
+        }
+
+        body>main>section>section>div:nth-child(3){
+            border: 2px solid black;
+            height: 250px;
+            width: 435px;
+            left: 1079px;
+            position: absolute;
+        }
+
+        body>main>section>p{
+            position: relative;
+            left: 205px;
+            width: 84vw;
+            right: 0;
+        }
+
+        footer{
+            position: relative;
+            background-color: darkgray;
+        }
+
+        footer>p{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: "Berlin Sans FB Demi" , cursive;
+        }
     </style>
 </head>
 <body>
@@ -55,10 +132,12 @@
 
 <main>
     <nav>
-        <li>Home</li>
-        <li>Service</li>
-        <li>Contacts</li>
-        <li>About Us</li>
+        <ul>
+            <li>Home</li>
+            <li>Service</li>
+            <li>Contacts</li>
+            <li>About Us</li>
+        </ul>
     </nav>
     <section>
         <!--full images-->
