@@ -48,17 +48,14 @@
         section {
             width: 300px;
             height: 300px;
-            border: 20px solid gray;
             border-radius: 100%;
             background-color: #1b57a3;
-            border-top: 20px solid red;
             position: absolute;
+            margin: auto;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
-            margin: auto;
-            font-family: 'Ubuntu', sans-serif;
         }
         section>h2{
             position: absolute;
@@ -74,17 +71,20 @@
         }
 
         section::after{
-            content: "B";
+            content: " ";
             position: absolute;
-            left: 0;
-            right: 0;
             top: 0;
             bottom: 0;
-            background-color: orangered;
+            left: 0;
+            right: 0;
+            border: 20px solid #77859d;
+            border-top: 20px solid #ff025f;
+            border-radius: 100%;
         }
         section:hover::after{
             transform: rotate(360deg);
             transition: all 2s;
+            cursor: pointer;
         }
 
     </style>
