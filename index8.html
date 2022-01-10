@@ -2,88 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Animation</title>
-    <link href="assets/CSS/normalize.css" rel="stylesheet">
-    <meta content="width=device-width initial-scale=1" name="viewport">
-    <link href="../normalize.css" rel="stylesheet">
-    <link href="assets/css/fonts/css/all.css" rel="stylesheet">
+    <title>Assignment_10_Water_Drop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        main {
-            width: 400px;
-            height: 300px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            overflow: hidden;
+
+        section{
+            position:absolute;
+            height: 97.5vh;
+            z-index: 100;
         }
 
-        main > section {
-            width: 400%;
-            height: 100%;
-            display: flex;
-            animation:slider 10s infinite ;
-            animation-direction:alternate;
+        section:active{
+            animation-name: click;
+            animation-duration: 0.5s;
+            animation-direction: initial;
+            animation-iteration-count: 1;
         }
 
-        main > section > div {
-            width: 100%;
+        section>div{
+            position: relative;
+            top: 30vh;
+            left: 38vw;
+            animation-name: waterDrop;
+            animation-duration: 2s;
+            animation-direction: initial;
+            animation-iteration-count: infinite;
         }
 
-        main > section > div:nth-child(1) {
-            background: url("assets/imeges/1.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-
-        main > section > div:nth-child(2) {
-            background: url("assets/imeges/3.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-
-        main > section > div:nth-child(3) {
-            background: url("assets/imeges/5.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-
-        main > section > div:nth-child(4) {
-            background: url("assets/imeges/7.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-
-        @keyframes slider {
-            0%,15%{
-                transform: translateX(0);
+        @keyframes waterDrop {
+            from{
+                width: 100px;
+                height: 100px;
+                border: 5px solid rgba(114, 17, 17, 0.94);
+                border-radius: 100%;
             }
-            25%,40%{
-                transform: translateX(-25%);
+            to{
+                width: 250px;
+                height: 250px;
+                border: 5px solid white;
+                border-radius: 100%;
             }
-            50%,70%{
-                transform: translateX(-50%);
+        }
+
+        @keyframes click {
+
+            from{
+                width: 0;
+                height: 0;
+                border-radius: 100%;
+                border: 2px solid rgb(55, 3, 112);
             }
-            80%,100%{
-                transform: translateX(-75%);
+            to{
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                border: 2px solid rgba(19, 190, 105, 0.99);
             }
         }
     </style>
 </head>
 <body>
-<main>
-    <section>
-        <div>
-        </div>
-        <div>
-        </div>
-        <div>
-        </div>
-        <div>
-        </div>
-    </section>
-</main>
+<section>
+    <div></div>
+</section>
 </body>
 </html>
