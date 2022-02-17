@@ -16,6 +16,7 @@
             position: relative;
             top: 38vh;
             left: 35vw;
+            display: inline;
         }
         #lineOne{
             position: relative;
@@ -24,6 +25,7 @@
             height: 4px;
             top: 40vh;
             left: 15vw;
+            display: inline;
         }
         #lineTwo{
             position: relative;
@@ -32,18 +34,20 @@
             height: 4px;
             top: 50vh;
             left: 15vw;
+            display: inline;
         }
         #flex{
             display: flex;
         }
         .square{
             position: relative;
-            margin: 5px;
+            margin: 8px;
             width: 9%;
             height: 50px;
             border: 1px solid white;
             top: 41.0vh;
             left: 18vw;
+            border-radius: 10px;
         }
         .button{
             position: relative;
@@ -55,18 +59,18 @@
 </head>
 <body>
 <section>
-    <main>
+    <main id="main">
         <!--heading-->
         <section>
             <h1 id="heading">
                 JavaScript Knight Rider
             </h1>
         </section>
-        <section>
-            <!--line-->
+       <!-- <section>
+            &lt;!&ndash;line&ndash;&gt;
             <div id="lineOne"></div>
             <div id="lineTwo"></div>
-        </section>
+        </section>-->
         <section id="flex">
             <div id="one" class="square"></div>
             <div id="two" class="square"></div>
