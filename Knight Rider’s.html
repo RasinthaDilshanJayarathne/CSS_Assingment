@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Knight Rider’s theme light system</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body{
+            background: black;
+        }
+        #heading{
+            color: #ff253a;
+            font-size: 35px;
+            position: relative;
+            top: 38vh;
+            left: 35vw;
+        }
+        #lineOne{
+            position: relative;
+            background-color: white;
+            width: 1000px;
+            height: 4px;
+            top: 40vh;
+            left: 15vw;
+        }
+        #lineTwo{
+            position: relative;
+            background-color: white;
+            width: 1000px;
+            height: 4px;
+            top: 50vh;
+            left: 15vw;
+        }
+        #flex{
+            display: flex;
+        }
+        .square{
+            position: relative;
+            margin: 5px;
+            width: 9%;
+            height: 50px;
+            border: 1px solid white;
+            top: 41.0vh;
+            left: 18vw;
+        }
+        .button{
+            position: relative;
+            top: 50vh;
+            left: 40vw;
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <main>
+        <!--heading-->
+        <section>
+            <h1 id="heading">
+                JavaScript Knight Rider
+            </h1>
+        </section>
+        <section>
+            <!--line-->
+            <div id="lineOne"></div>
+            <div id="lineTwo"></div>
+        </section>
+        <section id="flex">
+            <div id="one" class="square"></div>
+            <div id="two" class="square"></div>
+            <div id="three" class="square"></div>
+            <div id="four" class="square"></div>
+            <div id="five" class="square"></div>
+            <div id="six" class="square"></div>
+        </section>
+        <!--button-->
+        <section>
+            <button id="start" class="button">START</button>
+            <button id="stop" class="button">STOP</button>
+        </section>
+    </main>
+</section>
+
+<script src="assets/jquery-3.6.0.min.js"></script>
+<script>
+
+    let time;
+    $("start").click(function (){
+
+    });
+
+    $("stop").click(function (){
+
+    });
+
+    var i = 0;
+
+    function colourChange() {
+        setTimeout(function (){
+            if (i == 0) {
+                $("#one").css('background-color', '#cc0000');
+                $("#two").css('background-color', '#990000');
+                $("#three").css('background-color', '#993333');
+                $("#four").css('background-color', '#d98c8c');
+                $("#five").css('background-color', '#ecc6c6');
+                $("#six").css('background-color', '#cc0001');
+            }
+            if (i == 1) {
+                $("#one").css('background-color', '#cc00001');
+                $("#two").css('background-color', '#cc0000');
+                $("#three").css('background-color', '#990000');
+                $("#four").css('background-color', '#993333');
+                $("#five").css('background-color', '#d98c8c');
+                $("#six").css('background-color', '#ecc6c6');
+            }
+            if (i == 2) {
+                $("#one").css('background-color', '#ecc6c6');
+                $("#two").css('background-color', '#cc00001');
+                $("#three").css('background-color', '#cc0000');
+                $("#four").css('background-color', '#990000');
+                $("#five").css('background-color', '#993333');
+                $("#six").css('background-color', '#d98c8c');
+            }
+            if (i == 3) {
+                $("#one").css('background-color', '#d98c8c');
+                $("#two").css('background-color', '#ecc6c6');
+                $("#three").css('background-color', '#cc00001');
+                $("#four").css('background-color', '#cc0000');
+                $("#five").css('background-color', '#990000');
+                $("#six").css('background-color', '#993333');
+            }
+            if (i == 4) {
+                $("#one").css('background-color', '#993333');
+                $("#two").css('background-color', '#d98c8c');
+                $("#three").css('background-color', '#ecc6c6');
+                $("#four").css('background-color', '#cc00001');
+                $("#five").css('background-color', '#cc0000');
+                $("#six").css('background-color', '#990000');
+            }
+            if (i == 5) {
+                $("#one").css('background-color', '#990000');
+                $("#two").css('background-color', '#993333');
+                $("#three").css('background-color', '#d98c8c');
+                $("#four").css('background-color', '#ecc6c6');
+                $("#five").css('background-color', '#cc00001');
+                $("#six").css('background-color', '#cc0000');
+            }
+            if (i == 5) {
+                $("#one").css('background-color', '#cc0000');
+                $("#two").css('background-color', '#990000');
+                $("#three").css('background-color', '#993333');
+                $("#four").css('background-color', '#d98c8c');
+                $("#five").css('background-color', '#ecc6c6');
+                $("#six").css('background-color', '#cc00001');
+            }
+            i++;
+            if (i < 6) {
+                colourChange();
+            }else{
+                i=0;
+                colourChange();
+            }
+        },600)
+    }
+    colourChange();
+
+
+</script>
+</body>
+</html>
