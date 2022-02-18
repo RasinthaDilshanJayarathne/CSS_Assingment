@@ -10,83 +10,80 @@
         body{
             background: black;
         }
-        #heading{
-            color: #ff253a;
-            font-size: 35px;
-            position: relative;
-            top: 38vh;
-            left: 35vw;
-            display: inline;
-        }
-        #lineOne{
-            position: relative;
-            background-color: white;
-            width: 1000px;
-            height: 4px;
-            top: 40vh;
-            left: 15vw;
-            display: inline;
-        }
-        #lineTwo{
-            position: relative;
-            background-color: white;
-            width: 1000px;
-            height: 4px;
-            top: 50vh;
-            left: 15vw;
-            display: inline;
-        }
-        #flex{
-            display: flex;
-        }
-        .square{
-            position: relative;
-            margin: 8px;
-            width: 9%;
-            height: 50px;
-            border: 1px solid white;
-            top: 41.0vh;
-            left: 18vw;
-            border-radius: 10px;
-        }
-        .button{
-            position: relative;
-            top: 50vh;
-            left: 40vw;
-        }
+       #container{
+           border-top: 3px solid white;
+           border-bottom: 3px solid white;
+           width: 50%;
+           height: 80px;
+           position: relative;
+           top: 300px;
+           left: 25%;
+       }
+       #main{
+           display: flex;
+       }
+       .square{
+           border: 1px solid black;
+           width: 150px;
+           border-radius: 10px;
+           height: 56px;
+           position: relative;
+           top:-47px;
+           margin: 1%;
+       }
+       .button{
+           width: 120px;
+           height: 30px;
+       }
+       #start{
+           position: relative;
+           left: 33%;
+           color: aliceblue;
+           border: none;
+           background-color: blue;
+           top: 0%;
+       }
+       #stop{
+           position: relative;
+           left: 35%;
+           top: 60%;
+           color: aliceblue;
+           border: none;
+           background-color: red;
+           top: 0%;
+       }
+       #heading{
+           text-align: center;
+           font-size:35px;
+           color: #ff253a;
+           left: 3%;
+           position: relative;
+           bottom: 85%;
+       }
 
     </style>
 </head>
 <body>
-<section>
-    <main id="main">
-        <!--heading-->
-        <section>
-            <h1 id="heading">
-                JavaScript Knight Rider
-            </h1>
-        </section>
-       <!-- <section>
-            &lt;!&ndash;line&ndash;&gt;
-            <div id="lineOne"></div>
-            <div id="lineTwo"></div>
-        </section>-->
-        <section id="flex">
-            <div id="one" class="square"></div>
-            <div id="two" class="square"></div>
-            <div id="three" class="square"></div>
-            <div id="four" class="square"></div>
-            <div id="five" class="square"></div>
-            <div id="six" class="square"></div>
-        </section>
-        <!--button-->
-        <section>
-            <button id="start" class="button">START</button>
-            <button id="stop" class="button">STOP</button>
-        </section>
-    </main>
-</section>
+<main id="container">
+    <!--Heading-->
+    <h1 id="heading">JavaScript Knight Rider</h1>
 
+    <!--square-->
+    <section id="main">
+        <div id="one" class="square"></div>
+        <div id="two" class="square"></div>
+        <div id="three" class="square"></div>
+        <div id="four" class="square"></div>
+        <div id="five" class="square"></div>
+        <div id="six" class="square"></div>
+    </section>
+
+    <!--Button-->
+    <button id="start" class="button">START</button>
+    <button id="stop" class="button">STOP</button>
+
+
+</main>
 <script src="assets/jquery-3.6.0.min.js"></script>
 <script>
 
@@ -151,7 +148,7 @@
                 $("#five").css('background-color', '#cc00001');
                 $("#six").css('background-color', '#cc0000');
             }
-            if (i == 5) {
+            if (i == 6) {
                 $("#one").css('background-color', '#cc0000');
                 $("#two").css('background-color', '#990000');
                 $("#three").css('background-color', '#993333');
@@ -166,11 +163,9 @@
                 i=0;
                 colourChange();
             }
-        },600)
+        },500)
     }
     colourChange();
-
-
 </script>
 </body>
 </html>
